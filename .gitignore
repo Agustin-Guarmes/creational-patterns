@@ -1,2 +1,5 @@
 .DS_Store
 /creational-patterns/nbproject/private/
+/creational-patterns/build/
+.idea/
+creational-patterns.iml
