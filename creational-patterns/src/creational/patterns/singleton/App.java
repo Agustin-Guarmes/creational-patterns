@@ -1,6 +1,6 @@
 package creational.patterns.singleton;
 
-public class Singleton {
+public class App {
     public static void main(String[] args) {
         ConexionBd conexionBd = ConexionBd.getInstance();
         System.out.println(conexionBd.conectar());
