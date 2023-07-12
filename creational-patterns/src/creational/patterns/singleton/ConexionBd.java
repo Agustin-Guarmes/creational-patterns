@@ -5,8 +5,10 @@ public class ConexionBd {
     private String dbUrl;
     private String nombreUsuario;
     private String contrasenaUsuario;
+    //Atributo privado de la propia clase, debe ser estatico porque sera utilizado dentro de un metodo estatico
     private static ConexionBd instance;
 
+    //Constructor privado para evitar que se puedan crear instancias de esta clase mas alla del singleton
     private ConexionBd() {
         this.jdbcDriver = "com.mysql.cj.jdbc.Driver";
         this.dbUrl = "jdbc:mysql://localhost:3306/bdSingleton";
@@ -14,6 +16,7 @@ public class ConexionBd {
         this.contrasenaUsuario = "root";
     }
 
+    //Metodo estatico global que permite crear/utilizar la instancia de esta clase
     public static ConexionBd getInstance() {
         if (instance == null) instance = new ConexionBd();
         return instance;
