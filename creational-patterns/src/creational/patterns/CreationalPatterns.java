@@ -1,5 +1,6 @@
 package creational.patterns;
 
+import creational.patterns.builder.demo.DemoPc;
 import creational.patterns.prototype.Producto;
 import creational.patterns.prototype.ProductoConcreto;
 import java.util.Scanner;
@@ -29,7 +30,8 @@ public class CreationalPatterns {
 
                     break;
                 case 3:
-
+                      DemoPc demo = new DemoPc();
+                      demo.run();
                     break;
                 case 4:
                     Producto producto1 = new ProductoConcreto("Producto A", 100);
