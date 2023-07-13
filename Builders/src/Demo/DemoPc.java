@@ -47,7 +47,7 @@ public class DemoPc {
             manual = manualBuilder.getResult();
         }
         
-        System.out.println(pc.getTipo());
+        System.out.println("Tipo de pc: "+pc.getTipo());
         System.out.println(manual.print());
         
     }

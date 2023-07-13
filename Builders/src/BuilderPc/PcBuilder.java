@@ -2,7 +2,7 @@ package BuilderPc;
 
 import Entidad.*;
 
-import java.util.Comparator;
+
 
 public class PcBuilder implements Builder{
     private String tipo;

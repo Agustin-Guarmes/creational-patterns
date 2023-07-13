@@ -1,12 +1,12 @@
 package Entidad;
 
 public class ManualPc {
-    private String tipo;
-    private Procesador cpu;
-    private Ram ram;
-    private PlacaVideo placaVideo;
-    private Psu psu;
-    private PlacaMadre placaMadre;
+    private final String tipo;
+    private final Procesador cpu;
+    private final Ram ram;
+    private final PlacaVideo placaVideo;
+    private final Psu psu;
+    private final PlacaMadre placaMadre;
 
     public ManualPc(String tipo, Procesador cpu, Ram ram, PlacaVideo placaVideo, Psu psu, PlacaMadre placaMadre) {
         this.tipo = tipo;
