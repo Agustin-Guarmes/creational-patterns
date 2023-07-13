@@ -41,8 +41,9 @@ public class CreationalPatterns {
                 case 1:
                     Inmobiliaria inmobiliaria = new Inmobiliaria();
                     ViviendaFactory viviendaFactory = inmobiliaria.crearViviendaFactory("casa");
+                    System.out.println("Llamamos al metodo de la factory cotizarYConstruir vivienda");
                     Construible vivienda = viviendaFactory.cotizarYConstruir();
-                    System.out.println(vivienda.getClass().getSimpleName());
+                    System.out.println("La vivienda es de tipo : "+ vivienda.getClass().getSimpleName());
                     break;
                 case 2:
                     //Instancias de las fábricas concretas:
