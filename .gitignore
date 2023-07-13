@@ -1,4 +1,8 @@
-
 /creational-patterns/nbproject/private/
 /creational-patterns/build/
-
+.DS_Store
+/creational-patterns/nbproject/private/
+.idea/
+creational-patterns.iml
+.class
+/out/
