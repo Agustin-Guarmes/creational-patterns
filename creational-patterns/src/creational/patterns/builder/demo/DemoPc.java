@@ -49,7 +49,7 @@ public class DemoPc {
         
         System.out.println("Tipo de pc: "+pc.getTipo());
         System.out.println(manual.print());
-        System.out.println("Desea crear otra pc? Ingrese 1");
+        System.out.println("Desea crear otra pc? Ingrese 1 \n salir Ingrese 3");
         op = scan.nextInt();
         }while(op!=3);
         
