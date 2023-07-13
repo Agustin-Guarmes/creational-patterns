@@ -5,8 +5,13 @@ import creational.patterns.abstractFactory.concreteFactories.SamsungFactory;
 import creational.patterns.abstractFactory.concreteFactories.SonyFactory;
 import creational.patterns.abstractFactory.interfaces.AbstractFactoryElectronicDevice;
 import creational.patterns.builder.demo.DemoPc;
+import creational.patterns.factory_method_abstracto.Inmobiliaria;
+import creational.patterns.factory_method_abstracto.entity.Construible;
+import creational.patterns.factory_method_abstracto.factory.ViviendaFactory;
 import creational.patterns.prototype.Producto;
 import creational.patterns.prototype.ProductoConcreto;
+import creational.patterns.singleton.ConexionBd;
+
 import java.util.Scanner;
 
 public class CreationalPatterns {
@@ -34,7 +39,10 @@ public class CreationalPatterns {
 
             switch (option) {
                 case 1:
-
+                    Inmobiliaria inmobiliaria = new Inmobiliaria();
+                    ViviendaFactory viviendaFactory = inmobiliaria.crearViviendaFactory("casa");
+                    Construible vivienda = viviendaFactory.cotizarYConstruir();
+                    System.out.println(vivienda.getClass().getSimpleName());
                     break;
                 case 2:
                     //Instancias de las fábricas concretas:
@@ -55,8 +63,8 @@ public class CreationalPatterns {
                     lgFactory.createSmartTV().paint();
                     break;
                 case 3:
-                      DemoPc demo = new DemoPc();
-                      demo.run();
+                    DemoPc demo = new DemoPc();
+                    demo.run();
                     break;
                 case 4:
                     Producto producto1 = new ProductoConcreto("Producto A", 100);
@@ -69,7 +77,11 @@ public class CreationalPatterns {
                     productoClonado2.mostrarInfo();
                     break;
                 case 5:
-
+                    ConexionBd conexionBd = ConexionBd.getInstance();
+                    System.out.println(conexionBd.conectar());
+                    System.out.println(conexionBd.desconectar());
+                    ConexionBd conexionBd1 = ConexionBd.getInstance();
+                    // Si debugueamos la linea 5 y 9, notaremos que ambas conexiones hacen referencia a la misma instancia en memoria.
                     break;
                 case 0:
                     break;
