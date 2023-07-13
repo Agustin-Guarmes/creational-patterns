@@ -1,8 +1,8 @@
 package creational.patterns;
 
-import creational.patterns.abstractFactory.concreteFactory.LgFactory;
-import creational.patterns.abstractFactory.concreteFactory.SamsungFactory;
-import creational.patterns.abstractFactory.concreteFactory.SonyFactory;
+import creational.patterns.abstractFactory.concreteFactories.LgFactory;
+import creational.patterns.abstractFactory.concreteFactories.SamsungFactory;
+import creational.patterns.abstractFactory.concreteFactories.SonyFactory;
 import creational.patterns.abstractFactory.interfaces.AbstractFactoryElectronicDevice;
 import creational.patterns.prototype.Producto;
 import creational.patterns.prototype.ProductoConcreto;

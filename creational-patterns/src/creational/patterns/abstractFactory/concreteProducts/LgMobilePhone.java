@@ -1,4 +1,4 @@
-package creational.patterns.abstractFactory.concreteClasses;
+package creational.patterns.abstractFactory.concreteProducts;
 
 import creational.patterns.abstractFactory.interfaces.MobilePhone;
 

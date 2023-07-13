@@ -1,7 +1,7 @@
-package creational.patterns.abstractFactory.concreteFactory;
+package creational.patterns.abstractFactory.concreteFactories;
 
-import creational.patterns.abstractFactory.concreteClasses.SamsungMobilePhone;
-import creational.patterns.abstractFactory.concreteClasses.SamsungSmartTv;
+import creational.patterns.abstractFactory.concreteProducts.SamsungMobilePhone;
+import creational.patterns.abstractFactory.concreteProducts.SamsungSmartTv;
 import creational.patterns.abstractFactory.interfaces.AbstractFactoryElectronicDevice;
 import creational.patterns.abstractFactory.interfaces.MobilePhone;
 import creational.patterns.abstractFactory.interfaces.SmartTV;

@@ -1,7 +1,7 @@
-package creational.patterns.abstractFactory.concreteFactory;
+package creational.patterns.abstractFactory.concreteFactories;
 
-import creational.patterns.abstractFactory.concreteClasses.SonyMobilePhone;
-import creational.patterns.abstractFactory.concreteClasses.SonySmartTV;
+import creational.patterns.abstractFactory.concreteProducts.SonyMobilePhone;
+import creational.patterns.abstractFactory.concreteProducts.SonySmartTV;
 import creational.patterns.abstractFactory.interfaces.AbstractFactoryElectronicDevice;
 import creational.patterns.abstractFactory.interfaces.MobilePhone;
 import creational.patterns.abstractFactory.interfaces.SmartTV;
