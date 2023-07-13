@@ -1,10 +1,20 @@
 package creational.patterns;
 
+import creational.patterns.abstractFactory.concreteFactory.LgFactory;
+import creational.patterns.abstractFactory.concreteFactory.SamsungFactory;
+import creational.patterns.abstractFactory.concreteFactory.SonyFactory;
+import creational.patterns.abstractFactory.interfaces.AbstractFactoryElectronicDevice;
 import creational.patterns.prototype.Producto;
 import creational.patterns.prototype.ProductoConcreto;
 import java.util.Scanner;
 
 public class CreationalPatterns {
+
+    //Método donde se crea la instancia de un producto concreto (MobilePhone) mediante el factory recibido como parámetro y
+    // luego se llama al método paint() del producto concreto generado.
+    private static void paintMobile(AbstractFactoryElectronicDevice factory) {
+        factory.createMobilePhone().paint();
+    }
 
     public static void main(String[] args) {
 
@@ -12,7 +22,7 @@ public class CreationalPatterns {
         int option;
 
         do {
-            System.out.println("Patrones creacionales");
+            System.out.println("\nPatrones creacionales");
             System.out.println("1: Factory Method");
             System.out.println("2: Abstract Factory");
             System.out.println("3: Builder");
@@ -26,7 +36,22 @@ public class CreationalPatterns {
 
                     break;
                 case 2:
+                    //Instancias de las fábricas concretas:
+                    AbstractFactoryElectronicDevice samsungFactory = new SamsungFactory();
+                    AbstractFactoryElectronicDevice sonyFactory = new SonyFactory();
+                    AbstractFactoryElectronicDevice lgFactory = new LgFactory();
 
+                    System.out.println("\n=== Llamadas con Samsung Factory ===");
+                    paintMobile(samsungFactory);                 //Opción utilizando un método.
+                    samsungFactory.createSmartTV().paint();      //Opción sin utilizar un método.
+
+                    System.out.println("\n=== Llamadas con Sony Factory ===");
+                    paintMobile(sonyFactory);
+                    sonyFactory.createSmartTV().paint();
+
+                    System.out.println("\n=== Llamadas con LG Factory ===");
+                    paintMobile(lgFactory);
+                    lgFactory.createSmartTV().paint();
                     break;
                 case 3:
 
