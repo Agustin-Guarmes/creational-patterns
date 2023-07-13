@@ -1,12 +1,14 @@
 package creational.patterns.factory_method_abstracto;
 
 
-import creational.patterns.factory_method_abstracto.factory.FiguraFactory;
+import creational.patterns.factory_method_abstracto.entity.Construible;
+import creational.patterns.factory_method_abstracto.factory.ViviendaFactory;
 
 public class App {
     public static void main(String[] args) {
-        Demo demo = new Demo();
-        FiguraFactory figuraFactory = demo.crearFigura(Demo.CUADRADO);
-        figuraFactory.mostrarSuperficie();
+        Inmobiliaria inmobiliaria = new Inmobiliaria();
+        ViviendaFactory viviendaFactory = inmobiliaria.crearViviendaFactory("casa");
+        Construible vivienda = viviendaFactory.cotizarYConstruir();
+        System.out.println(vivienda.getClass().getSimpleName());
     }
 }

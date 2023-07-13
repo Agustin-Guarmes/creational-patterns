@@ -7,6 +7,13 @@ import creational.patterns.factory_method_concreto.entity.impl.Cuadrado;
 public class FiguraFactory {
     public static final String CIRCULO = "circulo";
     public static final String CUADRADO = "cuadrado";
+    private static FiguraFactory instance;
+    private FiguraFactory(){}
+
+    public static FiguraFactory getInstance(){
+        if(instance == null) instance = new FiguraFactory();
+        return instance;
+    }
 
     public Figura crearFigura(String tipo) {
         Figura figura = null;
@@ -22,9 +29,5 @@ public class FiguraFactory {
                 break;
         }
         return figura;
-    }
-
-    public void mostrarSuperficie(Figura figura){
-        System.out.println(figura.calcularSuperficie());
     }
 }
